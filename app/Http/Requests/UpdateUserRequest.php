@@ -26,7 +26,7 @@ class UpdateUserRequest extends FormRequest
         return [
             'full_name' => 'required',
             'email' => 'required|email|unique:users,email,' . $this->user->id,
-            'phone_number' => 'numeric|min:8|max:10'
+            'phone_number' => 'min:8|max:10'
         ];
     }
 }
